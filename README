@@ -1,0 +1,11 @@
+Rogoz Claudia 311CA
+
+	Tema consta in realizarea unui sistem postal prin intermediul claselor in C++.
+	Pentru realizarea temei s-au folosit 3 fisiere '.h': "counter.h", "stack.h", "queue.h" si un fisier principal "main.cpp".
+	In cadrul fisierului "main.cpp" se retin intr-un vector de string-uri "x" toate comenzile poosibile. Pentru verificarea comenzii citite de la tastaura s-a folosit o functie hash care returneaza un cod specific fiecarei comenzi. In final verificarea comenzii se realizaeaza atat prin intermediul vectorului y (care retine valoarea hkey a comenzii ) cat si a functiei "strtok".
+	Clasa Counter contine toate informatiile unui singur ghiseu: coada de clienti "Q", stiva de pachete S, coada persoanelor care trebuie mutate "Move", MAX_weight = greutatea maxima admisa, MAX_weight = greutatea minima admisa, si variabila "open" care e setata pe 1 daca ghiseul curent este deschis sau 0 daca ghiseul curent este inchis.
+	Pentru comanda OPEN_WINDOW se seteaza in cadrul clasei Counter informatiile corespunzatoare ghiseului corespunzator.
+	Pentru comanda ADD_PERSON se apeleaza din counter functia enqueue din cadrul clasei Queue.
+	Pentru comenzile PRINT_QUEUES, PRINT_STACKS, FLUSH_STACKS se folosesc functiile print() respectiv deletes() din cadrul claselor Queue si Stack.
+	 Atat PROCESS, cat si PROCESS_ALL au la baza functia PROCESS din cadrul clasei Counter. In "main.cpp" se retine intr-o variabila k indexul urmatorului ghiseu care este deschis in cazul in care din cadrul ghiseului curent exista o coada de persoane care trebuie mutata la alt ghiseu.
+	In cadrul functiei PROCESS din "counter.h" se retin detaliile persoanei la rand pentru a verifica daca pachetul curent verifica limita de greutate din cadrul ghiseului. In cazul in care verifica cerintele, coletul este pus in stiva, iar in caz contrar, persoana curenta este pusa in coada "Move" pentru  a fi procesata in cadrul functiei main.cpp.
